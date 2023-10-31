@@ -11,7 +11,11 @@ class Stel {
     this.persoon2 = persoon2;
 
     this.totaalJaarlijksInkomen = this.persoon1.getInkomen() + this.persoon2.getInkomen();
-    this.hypotheek = new Hypotheek(30, 8989);
+    this.hypotheek = new Hypotheek(30, 8989, this.studieschuldAanwezig(), this.totaalJaarlijksInkomen);
+  }
+
+  studieschuldAanwezig = () => {
+    if(this.persoon1.getStudieschuld() || this.persoon2.getStudieschuld()) return true;
   }
 
   getInkomen = () => {
