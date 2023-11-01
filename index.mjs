@@ -11,8 +11,8 @@ console.log("Max hypotheek:", hypotheekAlleenstaandPersoon.getMaxHypotheek());
 console.log("Max hypotheek met rente:", hypotheekAlleenstaandPersoon.getMaxHypotheekMetRente());
 console.log("Maand kosten:", hypotheekAlleenstaandPersoon.getTotaleMaandKosten());
 
-const persoon1 = new Persoon(30000, 30, true);
-const persoon2 = new Persoon(20000, 30, false);
+const persoon1 = new Persoon(30000, 30, false);
+const persoon2 = new Persoon(25000, 30, false);
 
 const stel = new Stel(persoon1, persoon2);
 const hypotheekStel = stel.getHypotheek();
