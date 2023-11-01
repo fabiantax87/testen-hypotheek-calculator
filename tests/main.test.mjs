@@ -2,6 +2,11 @@ import Hypotheek from "../classes/Hypotheek.mjs";
 
 const hypotheek = new Hypotheek(5, 8888, false, 30000);
 
+test("Bekijk of een postcode is toegestaan", () => {
+  expect(hypotheek.checkPostcodeToegestaan(1234)).toBe(true);
+  expect(hypotheek.checkPostcodeToegestaan(9679)).toBe(false);
+});
+
 test("Bereken rente percentage", () => {
   expect(hypotheek.berekenRentePercentage(5)).toBe(3);
 });

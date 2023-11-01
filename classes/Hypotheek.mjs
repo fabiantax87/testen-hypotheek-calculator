@@ -8,7 +8,7 @@ class Hypotheek {
   constructor(rentevastePeriode, gekozenPostcode, studieschuld, totaalJaarlijksInkomen) {
     this.rentevastePeriode = rentevastePeriode;
 
-    this.checkPostcodeToegestaan(gekozenPostcode);
+    !this.checkPostcodeToegestaan(gekozenPostcode) && process.exit();
 
     this.rentePercentage = this.berekenRentePercentage(rentevastePeriode);
     this.maxHypotheek = this.berekenMaxHypotheek(studieschuld, totaalJaarlijksInkomen);
@@ -19,8 +19,10 @@ class Hypotheek {
   checkPostcodeToegestaan = (postcode) => {
     if(postcode == 9679 || postcode == 9681 || postcode == 9682) {
       console.error("Hypotheek aanvraag is niet geaccepteerd, wij ondersteunen deze postcode gebieden niet wegens aarbevingsgevaar.");
-      process.exit();
+      return false;
     }
+
+    return true;
   }
 
   berekenRentePercentage = (rentevastePeriodetest) => {
