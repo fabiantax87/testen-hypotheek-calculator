@@ -26,7 +26,3 @@ test("Bereken max hypotheek met rente", () => {
 test("Bereken totale maand kosten", () => {
   expect(hypotheek.berekenTotaleMaandKosten(146625, 5)).toBe(2443.75);
 });
-
-/*
-  @TODO is dit genoeg code coverage?? integratie testen??
-*/

@@ -16,6 +16,7 @@ class Stel {
 
   studieschuldAanwezig = () => {
     if(this.persoon1.getStudieschuld() || this.persoon2.getStudieschuld()) return true;
+    return false;
   }
 
   getHypotheek = () => {

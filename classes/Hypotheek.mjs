@@ -18,7 +18,6 @@ class Hypotheek {
 
   checkPostcodeToegestaan = (postcode) => {
     if(postcode == 9679 || postcode == 9681 || postcode == 9682) {
-      console.error("Hypotheek aanvraag is niet geaccepteerd, wij ondersteunen deze postcode gebieden niet wegens aarbevingsgevaar.");
       return false;
     }
 
