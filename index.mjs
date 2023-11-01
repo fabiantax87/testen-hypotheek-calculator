@@ -1,6 +1,6 @@
-import AlleenstaandPersoon from "./AlleenstaandPersoon.mjs";
-import Persoon from "./Persoon.mjs";
-import Stel from "./Stel.mjs";
+import AlleenstaandPersoon from "./classes/AlleenstaandPersoon.mjs";
+import Persoon from "./classes/Persoon.mjs";
+import Stel from "./classes/Stel.mjs";
 
 const alleenstaandPersoon = new AlleenstaandPersoon(30000, 30, false);
 const hypotheekAlleenstaandPersoon = alleenstaandPersoon.getHypotheek();

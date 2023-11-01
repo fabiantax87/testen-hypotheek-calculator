@@ -1,4 +1,4 @@
-import Hypotheek from "./Hypotheek.mjs";
+import Hypotheek from "../classes/Hypotheek.mjs";
 
 const hypotheek = new Hypotheek(5, 8888, false, 30000);
 
