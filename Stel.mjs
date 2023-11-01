@@ -18,30 +18,12 @@ class Stel {
     if(this.persoon1.getStudieschuld() || this.persoon2.getStudieschuld()) return true;
   }
 
+  getHypotheek = () => {
+    return this.hypotheek;
+  }
+
   getInkomen = () => {
     return this.totaalJaarlijksInkomen;
-  }
-
-  getRentePercentage = () => {
-    return this.hypotheek.getRentePercentage();
-  }
-
-  getMaxHypotheek = () => {
-    let studieschuld = false;
-
-    if(this.persoon1.getStudieschuld() || this.persoon2.getStudieschuld()){
-      studieschuld = true;
-    }
-
-    return this.hypotheek.getMaxHypotheek(studieschuld, this.getInkomen());
-  }
-
-  getMaxHypotheekMetRente = () => {
-    return this.hypotheek.getMaxHypotheekMetRente();
-  }
-
-  getTotaleMaandKosten = () => {
-    return this.hypotheek.getTotaleMaandKosten();
   }
 }
 

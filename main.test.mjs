@@ -1,13 +1,17 @@
 import Hypotheek from "./Hypotheek.mjs";
 
-const hypotheek = new Hypotheek(5, 8888);
+const hypotheek = new Hypotheek(5, 8888, false, 30000);
 
 test("Bereken rente percentage", () => {
   expect(hypotheek.berekenRentePercentage(5)).toBe(3);
 });
 
-test("Bereken max hypotheek", () => {
+test("Bereken max hypotheek zonder studieschuld", () => {
   expect(hypotheek.berekenMaxHypotheek(false, 30000)).toBe(127500);
+});
+
+test("Bereken max hypotheek met studieschuld", () => {
+  expect(hypotheek.berekenMaxHypotheek(true, 30000)).toBe(95625);
 });
 
 test("Bereken max hypotheek met rente", () => {

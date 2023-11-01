@@ -9,20 +9,8 @@ class AlleenstaandPersoon extends Persoon {
     this.hypotheek = new Hypotheek(30, 8787, studieschuld, totaalJaarlijksInkomen);
   }
 
-  getRentePercentage = () => {
-    return this.hypotheek.getRentePercentage();
-  }
-
-  getMaxHypotheek = () => {
-    return this.hypotheek.getMaxHypotheek(this.studieschuld, this.getInkomen());
-  }
-
-  getMaxHypotheekMetRente = () => {
-    return this.hypotheek.getMaxHypotheekMetRente();
-  }
-
-  getTotaleMaandKosten = () => {
-    return this.hypotheek.getTotaleMaandKosten();
+  getHypotheek() {
+    return this.hypotheek;
   }
 }
 
